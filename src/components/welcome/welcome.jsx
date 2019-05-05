@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   time: PropTypes.number,
-  errorCount: PropTypes.number
+  errorCount: PropTypes.number,
+  onClick: PropTypes.func,
 };
 
 const Welcome = (props) => {
   const {
     time,
-    errorCount
+    errorCount,
+    onClick
   } = props;
 
   return (
@@ -17,7 +19,10 @@ const Welcome = (props) => {
       <div className="welcome__logo">
         <img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83"/>
       </div>
-      <button className="welcome__button">
+      <button
+        className="welcome__button"
+        onClick={onClick}
+      >
         <span className="visually-hidden">Начать игру</span>
       </button>
       <h2 className="welcome__rules-title">Правила игры</h2>
