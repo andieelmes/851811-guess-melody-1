@@ -5,13 +5,14 @@ const propTypes = {
   time: PropTypes.number,
   errorCount: PropTypes.number,
   onClick: PropTypes.func,
+  types: PropTypes.arrayOf(PropTypes.string)
 };
 
 const Welcome = (props) => {
   const {
     time,
     errorCount,
-    onClick
+    onClick,
   } = props;
 
   return (
